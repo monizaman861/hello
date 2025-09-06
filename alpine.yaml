@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alpine-nginx-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: alpine-nginx
+  template:
+    metadata:
+      labels:
+        app: alpine-nginx
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx:alpine  # Uses the Nginx image based on Alpine Linux
+        ports:
+        - containerPort: 80
