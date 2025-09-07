@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: alpine-nginx-deployment
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: alpine-nginx
